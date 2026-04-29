@@ -1,0 +1,8 @@
+{
+  "label": "Operacion",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Configuracion, scripts, pruebas, despliegue y cierre del proyecto."
+  }
+}

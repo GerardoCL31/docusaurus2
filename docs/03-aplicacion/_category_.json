@@ -1,0 +1,8 @@
+{
+  "label": "Aplicacion",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Frontend, backend, seguridad e integraciones."
+  }
+}
