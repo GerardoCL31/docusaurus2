@@ -12,13 +12,13 @@ CoronaHUB permite tres modos de persistencia.
 | --- | --- |
 | `mongo` | Usa MongoDB como base de datos principal |
 | `file` | Usa archivo JSON local |
-| `auto` | Intenta MongoDB y aplica fallback automatico en desarrollo |
+| `auto` | Intenta MongoDB y aplica fallback automático en desarrollo |
 
 ## Entidades principales
 
-- `Review`: opiniones enviadas por clientes y moderadas por administracion.
+- `Review`: opiniones enviadas por clientes y moderadas por administración.
 - `Reservation`: solicitudes de reserva con estado y datos de contacto.
-- `Settings`: configuracion editable de carta, eventos, imagenes y textos.
+- `Settings`: configuración editable de carta, eventos, imágenes y textos.
 
 ## Datos iniciales
 

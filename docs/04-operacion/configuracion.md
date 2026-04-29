@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Configuracion
-description: Variables de entorno y parametros configurables.
+title: Configuración
+description: Variables de entorno y parámetros configurables.
 ---
 
-# Configuracion
+# Configuración
 
-El proyecto utiliza un archivo `.env` para centralizar parametros de:
+El proyecto utiliza un archivo `.env` para centralizar parámetros de:
 
 - Entorno.
 - Persistencia.

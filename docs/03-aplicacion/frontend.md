@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
 title: Frontend
-description: Diseno del frontend publico y privado.
+description: Diseño del frontend público y privado.
 ---
 
 # Frontend
 
-El frontend esta organizado alrededor de rutas publicas y privadas. Usa `react-router-dom` para la navegacion y rutas protegidas para limitar el acceso al dashboard.
+El frontend está organizado alrededor de rutas públicas y privadas. Usa `react-router-dom` para la navegación y rutas protegidas para limitar el acceso al dashboard.
 
-## Paginas publicas
+## Páginas públicas
 
 - Home.
 - Carta.
@@ -18,20 +18,20 @@ El frontend esta organizado alrededor de rutas publicas y privadas. Usa `react-r
 - Reservas.
 - Legal.
 
-## Paginas privadas
+## Páginas privadas
 
 - Login.
-- Dashboard con secciones de gestion.
+- Dashboard con secciones de gestión.
 
 ## Servicios
 
-Los servicios estan centralizados para:
+Los servicios están centralizados para:
 
 - API general.
-- Autenticacion.
+- Autenticación.
 - Reservas.
 - Opiniones.
 - Carta.
 - Eventos.
 
-El token de sesion se gestiona en `localStorage` y el estilo se organiza mediante CSS global y estilos por zonas.
+El token de sesión se gestiona en `localStorage` y el estilo se organiza mediante CSS global y estilos por zonas.

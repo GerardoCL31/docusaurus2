@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
-title: Tecnologias
+title: Tecnologías
 description: Stack tecnico usado en frontend, backend, desarrollo y testing.
 ---
 
-# Tecnologias
+# Tecnologías
 
 ## Frontend
 
@@ -35,4 +35,4 @@ description: Stack tecnico usado en frontend, backend, desarrollo y testing.
 
 ## Motivos de eleccion
 
-React y Express ofrecen modularidad y ligereza. MongoDB se adapta a datos flexibles. Zod y JWT simplifican la validacion y la autenticacion. El conjunto mantiene el proyecto claro, practico y facil de desplegar.
+React y Express ofrecen modularidad y ligereza. MongoDB se adapta a datos flexibles. Zod y JWT simplifican la validación y la autenticación. El conjunto mantiene el proyecto claro, práctico y fácil de desplegar.

@@ -1,6 +1,6 @@
 # CoronaHUB Docs
 
-Documentacion tecnica del TFG CoronaHUB, creada con Docusaurus.
+Documentación técnica del TFG CoronaHUB, creada con Docusaurus.
 
 ## Desarrollo local
 
@@ -14,4 +14,4 @@ npm run start
 npm run build
 ```
 
-La salida estatica se genera en `build/`.
+La salida estática se genera en `build/`.

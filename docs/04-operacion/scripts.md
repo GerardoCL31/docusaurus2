@@ -6,7 +6,7 @@ description: Flujo de trabajo recomendado para desarrollo, pruebas y build.
 
 # Scripts y flujo de trabajo
 
-El proyecto incluye scripts para desarrollo, testing y build tanto en la raiz como en cliente y servidor.
+El proyecto incluye scripts para desarrollo, testing y build tanto en la raíz como en cliente y servidor.
 
 ## Flujo habitual
 
@@ -14,4 +14,4 @@ El proyecto incluye scripts para desarrollo, testing y build tanto en la raiz co
 2. Configurar `.env`.
 3. Ejecutar `npm run dev`.
 4. Lanzar pruebas.
-5. Generar build de produccion.
+5. Generar build de producción.

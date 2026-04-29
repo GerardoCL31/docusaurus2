@@ -1,48 +1,48 @@
 ---
 sidebar_position: 1
 title: Resumen del proyecto
-description: Vision general de CoronaHUB como TFG full-stack para Bar Corona.
+description: Visión general de CoronaHUB como TFG full-stack para Bar Corona.
 ---
 
 # CoronaHUB
 
-**Autor:** Gerardo Corona Lopez  
+**Autor:** Gerardo Corona López  
 **Tipo de proyecto:** Trabajo de Fin de Grado  
 **Cliente objetivo:** Bar Corona
 
-CoronaHUB es una aplicacion web full-stack creada para mejorar la presencia digital de Bar Corona y facilitar la gestion diaria de reservas, opiniones, carta y eventos.
+CoronaHUB es una aplicación web full-stack creada para mejorar la presencia digital de Bar Corona y facilitar la gestión diaria de reservas, opiniones, carta y eventos.
 
-El proyecto integra frontend, backend, persistencia, autenticacion, validacion, pruebas automatizadas y despliegue. Esta documentacion recoge las decisiones tecnicas principales y organiza el dossier por areas.
+El proyecto integra frontend, backend, persistencia, autenticación, validación, pruebas automatizadas y despliegue. Esta documentación recoge las decisiones técnicas principales y organiza el dossier por áreas.
 
-## Proposito
+## Propósito
 
 El sistema busca resolver necesidades concretas del negocio:
 
-- Mostrar informacion publica clara y actualizada.
-- Publicar carta, eventos, galeria, contacto e informacion legal.
+- Mostrar información pública clara y actualizada.
+- Públicar carta, eventos, galería, contacto e información legal.
 - Gestionar reservas desde una API y un panel privado.
 - Recoger opiniones y moderarlas antes de publicarlas.
-- Permitir que el administrador actualice contenido sin tocar codigo.
+- Permitir que el administrador actualice contenido sin tocar código.
 
-## Valor academico
+## Valor académico
 
-CoronaHUB es adecuado como TFG porque une en un unico sistema:
+CoronaHUB es adecuado como TFG porque une en un único sistema:
 
-- Diseno de interfaz de usuario.
-- Navegacion y routing.
+- Diseño de interfaz de usuario.
+- Navegación y routing.
 - Consumo de API.
 - Backend REST.
 - Persistencia con MongoDB o archivo JSON.
-- Validacion de entradas.
+- Validación de entradas.
 - Seguridad con JWT.
 - Testing automatizado.
-- Preparacion para despliegue.
+- Preparación para despliegue.
 
-## Estructura de la documentacion
+## Estructura de la documentación
 
 | Bloque | Contenido |
 | --- | --- |
-| Proyecto | Justificacion, objetivos, alcance y requisitos |
-| Arquitectura | Capas, tecnologias, persistencia y modelo de datos |
-| Aplicacion | Frontend, backend, API, seguridad e integraciones |
-| Operacion | Configuracion, scripts, testing, despliegue y conclusiones |
+| Proyecto | Justificación, objetivos, alcance y requisitos |
+| Arquitectura | Capas, tecnologías, persistencia y modelo de datos |
+| Aplicación | Frontend, backend, API, seguridad e integraciones |
+| Operación | Configuración, scripts, testing, despliegue y conclusiones |

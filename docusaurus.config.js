@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CoronaHUB',
-  tagline: 'Dossier tecnico del TFG',
+  tagline: 'Dossier técnico del TFG',
   favicon: 'img/favicom.png',
 
   future: {
@@ -55,7 +55,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Documentacion',
+            label: 'Documentación',
           },
         ],
       },
@@ -63,7 +63,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Documentacion',
+            title: 'Documentación',
             items: [
               {
                 label: 'Resumen',
@@ -76,7 +76,7 @@ const config = {
             ],
           },
           {
-            title: 'Tecnica',
+            title: 'Técnica',
             items: [
               {
                 label: 'Arquitectura',
@@ -89,7 +89,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} CoronaHUB. Documentacion tecnica del TFG.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CoronaHUB. Documentación técnica del TFG.`,
       },
       prism: {
         theme: prismThemes.github,

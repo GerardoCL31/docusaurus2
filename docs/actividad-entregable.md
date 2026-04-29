@@ -6,39 +6,39 @@ description: Resumen evaluable de arquitectura, uso, lanzamiento, despliegue y f
 
 # Actividad entregable
 
-Esta pagina resume los puntos tecnicos principales solicitados para la entrega de CoronaHUB.
+Esta página resume los puntos técnicos principales solicitados para la entrega de CoronaHUB.
 
-## Arquitectura de la aplicacion
+## Arquitectura de la aplicación
 
 CoronaHUB usa una arquitectura cliente-servidor en monorepo.
 
-| Parte | Responsabilidad | Tecnologia |
+| Parte | Responsabilidad | Tecnología |
 | --- | --- | --- |
-| Cliente | Interfaz publica y panel privado | React |
-| Servidor | API REST, autenticacion y reglas de negocio | Node.js y Express |
-| Persistencia | Reservas, opiniones y configuracion editable | MongoDB o archivo JSON |
+| Cliente | Interfaz pública y panel privado | React |
+| Servidor | API REST, autenticación y reglas de negocio | Node.js y Express |
+| Persistencia | Reservas, opiniones y configuración editable | MongoDB o archivo JSON |
 
-La aplicacion separa la presentacion, la logica de negocio y la persistencia. El frontend consume la API del backend mediante endpoints HTTP bajo el prefijo `/api`.
+La aplicación separa la presentación, la lógica de negocio y la persistencia. El frontend consume la API del backend mediante endpoints HTTP bajo el prefijo `/api`.
 
 ## Cliente y servidor
 
-El cliente web contiene las rutas publicas del bar y las pantallas privadas de administracion. El servidor expone endpoints REST, valida datos, aplica reglas funcionales y protege las rutas internas con JWT.
+El cliente web contiene las rutas públicas del bar y las pantallas privadas de administración. El servidor expone endpoints REST, valida datos, aplica reglas funcionales y protege las rutas internas con JWT.
 
 ```text
-client/   -> aplicacion React
+client/   -> aplicación React
 server/   -> API REST con Express
 tests/    -> pruebas automatizadas
-docs/     -> documentacion tecnica
+docs/     -> documentación técnica
 ```
 
 ## Lenguajes de programacion
 
-- JavaScript para frontend, backend, configuracion y pruebas.
+- JavaScript para frontend, backend, configuración y pruebas.
 - JSX para componentes React.
 - CSS para estilos de interfaz.
-- Markdown para documentacion.
+- Markdown para documentación.
 
-## Requisitos de version
+## Requisitos de versión
 
 - Node.js 20 o superior.
 - npm incluido con Node.js.
@@ -47,43 +47,43 @@ docs/     -> documentacion tecnica
 
 ## Backend
 
-El backend esta construido con Node.js y Express. Sus responsabilidades son:
+El backend está construido con Node.js y Express. Sus responsabilidades son:
 
 - Exponer la API REST.
 - Validar entradas con Zod.
-- Gestionar autenticacion con JWT.
+- Gestionar autenticación con JWT.
 - Aplicar reglas de reservas, opiniones, carta y eventos.
-- Conectar con MongoDB o usar almacenamiento en archivo segun configuracion.
+- Conectar con MongoDB o usar almacenamiento en archivo según configuración.
 
 ### Endpoints
 
 | Metodo | Endpoint | Acceso | Uso |
 | --- | --- | --- | --- |
-| `GET` | `/api/health` | Publico | Comprobar estado del servidor |
-| `GET` | `/api/menu` | Publico | Consultar la carta |
-| `GET` | `/api/events` | Publico | Consultar eventos |
-| `GET` | `/api/reviews` | Publico | Ver opiniones aprobadas |
-| `POST` | `/api/reviews` | Publico | Crear una opinion pendiente |
-| `POST` | `/api/reservations` | Publico | Crear una reserva |
-| `POST` | `/api/auth/login` | Publico | Iniciar sesion de administracion |
+| `GET` | `/api/health` | Público | Comprobar estado del servidor |
+| `GET` | `/api/menu` | Público | Consultar la carta |
+| `GET` | `/api/events` | Público | Consultar eventos |
+| `GET` | `/api/reviews` | Público | Ver opiniones aprobadas |
+| `POST` | `/api/reviews` | Público | Crear una opinión pendiente |
+| `POST` | `/api/reservations` | Público | Crear una reserva |
+| `POST` | `/api/auth/login` | Público | Iniciar sesión de administración |
 | `GET` | `/api/admin/*` | Privado | Consultas internas del panel |
-| `POST` | `/api/admin/*` | Privado | Creacion o actualizacion interna |
-| `PUT` | `/api/admin/*` | Privado | Modificacion de datos internos |
-| `DELETE` | `/api/admin/*` | Privado | Eliminacion de datos internos |
+| `POST` | `/api/admin/*` | Privado | Creación o actualización interna |
+| `PUT` | `/api/admin/*` | Privado | Modificación de datos internos |
+| `DELETE` | `/api/admin/*` | Privado | Eliminación de datos internos |
 
-### Autenticacion
+### Autenticación
 
-La autenticacion se basa en JWT:
+La autenticación se basa en JWT:
 
-- El administrador inicia sesion con credenciales configuradas en variables de entorno.
+- El administrador inicia sesión con credenciales configuradas en variables de entorno.
 - El backend devuelve un token firmado.
 - El frontend guarda el token en `localStorage`.
-- Las rutas privadas envian el token en la cabecera `Authorization: Bearer <token>`.
+- Las rutas privadas envían el token en la cabecera `Authorization: Bearer <token>`.
 - El middleware del servidor valida el token antes de permitir operaciones bajo `/api/admin/*`.
 
 Medidas complementarias:
 
-- Expiracion de token de 2 horas.
+- Expiración de token de 2 horas.
 - `helmet` para cabeceras de seguridad.
 - CORS configurable.
 - Rate limit en login y opiniones.
@@ -91,52 +91,52 @@ Medidas complementarias:
 
 ### OpenAPI
 
-No se incluye un contrato OpenAPI obligatorio en la entrega actual. Se puede anadir como mejora generando un archivo `openapi.yaml` a partir de la tabla de endpoints y de los esquemas Zod del backend.
+No se incluye un contrato OpenAPI obligatorio en la entrega actual. Se puede añadir como mejora generando un archivo `openapi.yaml` a partir de la tabla de endpoints y de los esquemas Zod del backend.
 
 ## Frontend
 
-El frontend esta construido con React y `react-router-dom`.
+El frontend está construido con React y `react-router-dom`.
 
-### Componentes y paginas
+### Componentes y páginas
 
-| Zona | Componentes o paginas |
+| Zona | Componentes o páginas |
 | --- | --- |
-| Publica | Home, carta, eventos, galeria, contacto, reservas y legal |
-| Privada | Login y dashboard de administracion |
-| Servicios | API general, autenticacion, reservas, opiniones, carta y eventos |
+| Pública | Home, carta, eventos, galería, contacto, reservas y legal |
+| Privada | Login y dashboard de administración |
+| Servicios | API general, autenticación, reservas, opiniones, carta y eventos |
 
-El frontend centraliza las llamadas HTTP en servicios para evitar duplicacion y mantener separada la logica de comunicacion con la API.
+El frontend centraliza las llamadas HTTP en servicios para evitar duplicación y mantener separada la lógica de comunicación con la API.
 
 ## Uso
 
 ### Registro
 
-La aplicacion no implementa registro publico de usuarios. El acceso privado esta pensado para un administrador del negocio con credenciales creadas por configuracion.
+La aplicación no implementa registro público de usuarios. El acceso privado está pensado para un administrador del negocio con credenciales creadas por configuración.
 
-### Inicio de sesion
+### Inicio de sesión
 
-1. El administrador entra en la pagina de login.
-2. Introduce usuario y contrasena.
-3. El frontend envia la peticion a `/api/auth/login`.
-4. Si las credenciales son validas, se guarda el JWT.
+1. El administrador entra en la página de login.
+2. Introduce usuario y contraseña.
+3. El frontend envía la petición a `/api/auth/login`.
+4. Si las credenciales son válidas, se guarda el JWT.
 5. El usuario accede al dashboard privado.
 
 ### Uso general
 
 Un visitante puede:
 
-- Ver informacion del bar.
+- Ver información del bar.
 - Consultar carta y eventos.
 - Enviar una reserva.
-- Enviar una opinion.
-- Consultar informacion de contacto y legal.
+- Enviar una opinión.
+- Consultar información de contacto y legal.
 
 Un administrador puede:
 
 - Ver reservas recibidas.
 - Gestionar opiniones pendientes.
-- Actualizar carta, eventos, imagenes y textos.
-- Mantener el contenido publico sin modificar codigo.
+- Actualizar carta, eventos, imágenes y textos.
+- Mantener el contenido público sin modificar código.
 
 ## Lanzamiento en local
 
@@ -147,7 +147,7 @@ Un administrador puede:
 - MongoDB si se quiere usar base de datos real.
 - Archivo `.env` configurado para el backend.
 
-### Instalacion y ejecucion
+### Instalación y ejecución
 
 ```bash
 npm install
@@ -170,7 +170,7 @@ npm start
 
 ### Base de datos
 
-La aplicacion puede funcionar en tres modos:
+La aplicación puede funcionar en tres modos:
 
 | Modo | Uso |
 | --- | --- |
@@ -180,13 +180,13 @@ La aplicacion puede funcionar en tres modos:
 
 ### API keys y login social
 
-No se requiere login social con Google ni proveedores externos. Tampoco se necesita API key para autenticacion social. Si se activa Telegram, si haria falta configurar el token del bot y el chat de destino.
+No se requiere login social con Google ni proveedores externos. Tampoco se necesita API key para autenticación social. Si se activa Telegram, sí haría falta configurar el token del bot y el chat de destino.
 
 ## Despliegue
 
 El proyecto se despliega separando frontend y backend:
 
-- Frontend: hosting estatico despues de generar la build.
+- Frontend: hosting estático después de generar la build.
 - Backend: servicio Node.js en Render u otra plataforma compatible.
 - Base de datos: MongoDB Atlas o una instancia MongoDB accesible desde el backend.
 
@@ -196,8 +196,8 @@ El proyecto se despliega separando frontend y backend:
 2. Instalar dependencias.
 3. Ejecutar tests.
 4. Generar build del frontend.
-5. Publicar frontend como estatico.
-6. Publicar backend como servicio Node.js.
+5. Públicar frontend como estático.
+6. Públicar backend como servicio Node.js.
 7. Validar `/api/health`.
 
 ### Variables de entorno
@@ -206,13 +206,13 @@ Variables habituales:
 
 | Variable | Uso |
 | --- | --- |
-| `NODE_ENV` | Entorno de ejecucion |
+| `NODE_ENV` | Entorno de ejecución |
 | `PORT` | Puerto del backend |
 | `DB_MODE` | Modo de persistencia |
-| `MONGODB_URI` | Conexion a MongoDB |
+| `MONGODB_URI` | Conexión a MongoDB |
 | `JWT_SECRET` | Firma de tokens |
 | `ADMIN_USER` | Usuario administrador |
-| `ADMIN_PASSWORD_HASH` | Hash de contrasena |
+| `ADMIN_PASSWORD_HASH` | Hash de contraseña |
 | `CORS_ORIGIN` | Origen permitido del frontend |
 | `IP_HASH_SALT` | Sal para anonimizar IP |
 | `TELEGRAM_BOT_TOKEN` | Token del bot, si se usa Telegram |
@@ -223,35 +223,35 @@ Variables habituales:
 El flujo de despliegue continuo recomendado es:
 
 1. Push a GitHub.
-2. Ejecucion de tests y build en CI.
+2. Ejecución de tests y build en CI.
 3. Merge a `main` solo si las comprobaciones pasan.
-4. Despliegue automatico del backend y del frontend desde `main`.
+4. Despliegue automático del backend y del frontend desde `main`.
 
-Se puede implementar con GitHub Actions, Render Deploy Hooks o la integracion automatica del proveedor de hosting.
+Se puede implementar con GitHub Actions, Render Deploy Hooks o la integración automática del proveedor de hosting.
 
 ## GitHub
 
 ### Monorepo o multirepo
 
-CoronaHUB se organiza como monorepo. En un unico repositorio viven frontend, backend, tests y documentacion.
+CoronaHUB se organiza como monorepo. En un único repositorio viven frontend, backend, tests y documentación.
 
 ### Ramas
 
 Flujo recomendado:
 
 - `main`: rama estable y desplegable.
-- `develop`: integracion previa si se quiere separar trabajo y produccion.
+- `develop`: integración previa si se quiere separar trabajo y producción.
 - `feature/nombre-corto`: desarrollo de funcionalidades concretas.
-- `fix/nombre-corto`: correccion de errores.
+- `fix/nombre-corto`: corrección de errores.
 
-### Integracion en main
+### Integración en main
 
 1. Crear rama desde `main` o `develop`.
-2. Hacer commits pequenos y revisables.
+2. Hacer commits pequeños y revisables.
 3. Ejecutar tests y build.
 4. Abrir pull request.
 5. Revisar cambios.
-6. Fusionar en `main` cuando todo este validado.
+6. Fusionar en `main` cuando todo esté validado.
 
 ### Estructura de commits
 
@@ -260,10 +260,10 @@ Se recomienda usar Conventional Commits:
 | Tipo | Uso | Ejemplo |
 | --- | --- | --- |
 | `feat` | Nueva funcionalidad | `feat: add reservation form` |
-| `fix` | Correccion de error | `fix: validate duplicated reservations` |
-| `docs` | Documentacion | `docs: add deployment guide` |
+| `fix` | Corrección de error | `fix: validate duplicated reservations` |
+| `docs` | Documentación | `docs: add deployment guide` |
 | `test` | Pruebas | `test: cover auth middleware` |
 | `refactor` | Cambio interno sin alterar comportamiento | `refactor: simplify menu service` |
 | `chore` | Tareas de mantenimiento | `chore: update dependencies` |
 
-Los mensajes deben ser claros, en imperativo y relacionados con una unidad logica de cambio.
+Los mensajes deben ser claros, en imperativo y relacionados con una unidad lógica de cambio.

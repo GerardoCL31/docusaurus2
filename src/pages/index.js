@@ -15,11 +15,11 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">
-          Documentacion tecnica del proyecto full-stack para Bar Corona.
+          Documentación técnica del proyecto full-stack para Bar Corona.
         </p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs/intro">
-            Abrir documentacion
+            Abrir documentación
           </Link>
           <a
             className={clsx('button button--secondary button--lg', styles.githubButton)}
@@ -60,15 +60,15 @@ export default function Home() {
             <div className={styles.grid}>
               <article>
                 <h2>Proyecto</h2>
-                <p>Justificacion, objetivos, alcance y requisitos del TFG.</p>
+                <p>Justificación, objetivos, alcance y requisitos del TFG.</p>
               </article>
               <article>
                 <h2>Arquitectura</h2>
-                <p>Capas, tecnologias, persistencia y estructura del monorepo.</p>
+                <p>Capas, tecnologías, persistencia y estructura del monorepo.</p>
               </article>
               <article>
-                <h2>Aplicacion</h2>
-                <p>Frontend, backend, seguridad, API e integracion con Telegram.</p>
+                <h2>Aplicación</h2>
+                <p>Frontend, backend, seguridad, API e integración con Telegram.</p>
               </article>
             </div>
           </div>

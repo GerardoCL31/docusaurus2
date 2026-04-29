@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Seguridad
-description: Medidas de autenticacion, control de acceso y proteccion de endpoints.
+description: Medidas de autenticación, control de acceso y protección de endpoints.
 ---
 
 # Seguridad y control de acceso
@@ -10,8 +10,8 @@ El sistema incorpora medidas para proteger la zona privada y reducir abusos sobr
 
 ## Medidas principales
 
-- JWT con expiracion de 2 horas.
-- Middleware de autenticacion.
+- JWT con expiración de 2 horas.
+- Middleware de autenticación.
 - Rate limiting en login y opiniones.
 - Helmet.
 - CORS configurable.
@@ -19,4 +19,4 @@ El sistema incorpora medidas para proteger la zona privada y reducir abusos sobr
 
 ## Zona privada
 
-El panel de administracion requiere autenticacion. Las operaciones internas se exponen bajo rutas protegidas y no quedan disponibles para usuarios publicos.
+El panel de administración requiere autenticación. Las operaciones internas se exponen bajo rutas protegidas y no quedan disponibles para usuarios públicos.

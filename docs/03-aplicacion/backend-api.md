@@ -1,26 +1,26 @@
 ---
 sidebar_position: 2
 title: Backend y API
-description: Rutas publicas, privadas, validaciones y reglas funcionales.
+description: Rutas públicas, privadas, validaciones y reglas funcionales.
 ---
 
 # Backend y API
 
-## Rutas publicas
+## Rutas públicas
 
 | Ruta | Uso |
 | --- | --- |
-| `/api/health` | Comprobacion del estado del servidor |
+| `/api/health` | Comprobación del estado del servidor |
 | `/api/menu` | Consulta de carta |
 | `/api/events` | Consulta de eventos |
-| `/api/reviews` | Gestion publica de opiniones |
-| `/api/reservations` | Creacion de reservas |
+| `/api/reviews` | Gestión pública de opiniones |
+| `/api/reservations` | Creación de reservas |
 
 ## Rutas privadas
 
-Las rutas privadas se agrupan bajo `/api/admin/*` y estan protegidas con JWT.
+Las rutas privadas se agrupan bajo `/api/admin/*` y están protegidas con JWT.
 
-## Validacion
+## Validación
 
 Zod valida:
 
@@ -32,7 +32,7 @@ Zod valida:
 
 ## Reglas funcionales
 
-- Las opiniones quedan pendientes hasta su aprobacion.
+- Las opiniones quedan pendientes hasta su aprobación.
 - Las reservas deben ser futuras.
 - No se permiten reservas en domingo.
 - Se evitan reservas duplicadas.
